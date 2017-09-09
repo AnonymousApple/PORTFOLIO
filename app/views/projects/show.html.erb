@@ -1,0 +1,15 @@
+<div class='well'>
+  <p>
+    <%= link_to @project.name, @project.deploy_url %>
+  </p>
+
+  <p>
+    <%= @project.description %>
+  </p>
+
+  <p>
+    <%= link_to 'GitHub', @project.source_url %>
+  </p>
+</div>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
