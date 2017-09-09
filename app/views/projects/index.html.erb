@@ -5,10 +5,30 @@
   <div class='col-md-4'>
     <div class="well">
       <%= image_tag project.image.url, width: '150', height: '150' if !project.image.blank? %>
-      <h1><%= link_to project.name, project.deploy_url, target: '_blank' %></h1>
+      <h1><%= project.name %></h1>
       <%= link_to 'source code', project.source_url %><br />
-      <%= project.description %><br />
-      <%= link_to 'Show', project, class: 'btn btn-success' %>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%= project.id %>">
+        Show
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="<%= project.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel"><%= project.name %></h4>
+            </div>
+            <div class="modal-body">
+              <%= project.description.html_safe %>
+            </div>
+            <div class="modal-footer">
+              <%= link_to 'View Application', project.deploy_url, target: '_blank', class: 'btn btn-primary', style: 'position: relative; right: 377px;' %>
+              <button type="button" class="btn btn-default" data-dismiss='modal' aria-label="Close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <% end %>

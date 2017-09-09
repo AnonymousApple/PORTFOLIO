@@ -6,13 +6,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      nav a, nav a:hover {
+        margin: 5px;
+        vertical-align: top;
+        font-size: 45px;
+        text-decoration: none;
+      }
+      nav {
+        background-color: black;
+      }
+    </style>
   </head>
 
   <body>
-    <% if !notice.nil? %>
-      <p id='notice' class='alert alert-info'><%= notice %></p>
-    <% end %>
     <div class='container'>
+      <nav>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'About', home_about_path %>
+      </nav>
+      <% if !notice.nil? %>
+        <p id='notice' class='alert alert-info'><%= notice %></p>
+      <% end %>
       <%= yield %>
     </div>
   </body>

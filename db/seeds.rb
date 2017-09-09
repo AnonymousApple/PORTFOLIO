@@ -2,7 +2,7 @@ Project.destroy_all
 Project.create([{name: 'eCommerce',
                  deploy_url: 'https://anonymousapple-ecommerce.herokuapp.com/',
                  source_url: 'https://github.com/AnonymousApple/eCommerce',
-                 description: 'Simple eCommerce App made with the Stripe API',
+                 description: 'Dete is a family-owned online restaurant focused on healthy, organic homemade food made from farm-fresh produce. With focus on the health of our customers in mind, we are ensuring that we provide chemical and preservative free meals. Our specialty is bringing international cuisine to your table.',
                  image: 'ecommerce logo  - Google Search.png'}])
 Project.create([{name: 'martaBusAPI',
                  deploy_url: 'https://marta-bus-api.herokuapp.com/',
