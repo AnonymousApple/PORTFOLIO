@@ -6,7 +6,6 @@
     <div class="well">
       <%= image_tag project.image.url, width: '150', height: '150' if !project.image.blank? %>
       <h1><%= project.name %></h1>
-      <%= link_to 'source code', project.source_url %><br />
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%= project.id %>">
         Show
@@ -23,7 +22,8 @@
               <%= project.description.html_safe %>
             </div>
             <div class="modal-footer">
-              <%= link_to 'View Application', project.deploy_url, target: '_blank', class: 'btn btn-primary', style: 'position: relative; right: 377px;' %>
+              <%= link_to 'View Application', project.deploy_url, target: '_blank', class: 'btn btn-primary' %>
+              <%= link_to 'source code', project.source_url, class: 'btn btn-success', target: '_blank' %>
               <button type="button" class="btn btn-default" data-dismiss='modal' aria-label="Close">Close</button>
             </div>
           </div>
