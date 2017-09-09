@@ -9,12 +9,8 @@
       <%= link_to 'source code', project.source_url %><br />
       <%= project.description %><br />
       <%= link_to 'Show', project, class: 'btn btn-success' %>
-      <%= link_to 'Edit', edit_project_path(id: project.id), class: 'btn btn-warning' %>
-      <%= link_to 'Delete', project, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
     </div>
   </div>
   <% end %>
 </div>
 <br>
-
-<%= link_to 'New Project', new_project_path, class: 'btn btn-success' %>
