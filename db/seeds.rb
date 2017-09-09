@@ -1,4 +1,4 @@
-Project.destroy_all!
+Project.destroy_all
 Project.create([{name: 'eCommerce',
                  deploy_url: 'https://anonymousapple-ecommerce.herokuapp.com/',
                  source_url: 'https://github.com/AnonymousApple/eCommerce',
