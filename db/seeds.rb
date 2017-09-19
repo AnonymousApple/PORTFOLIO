@@ -12,12 +12,12 @@ Project.create([{name: 'Twitter',
                  source_url: 'https://github.com/AnonymousApple/twitter-copy',
                  description: 'This mimics some of the functionality of Twitter by implementing:
                  <ul>
-                  <li>User accounts</li>,
-                  <li>followers</li>,
-                  <li>hashtags</li>,
+                  <li>User accounts,</li>
+                  <li>followers,</li>
+                  <li>hashtags,</li>
                  </ul>
                  and URL shorteners.'}])
-Project.create([{name: 'K4T',
-                 deploy_url: 'https://fbc-k4t.herokuapp.com/',
-                 source_url: 'https://github.com/AnonymousApple/Bible_study',
-                 description: 'Bible App to help Kids'}])
+# Project.create([{name: 'K4T',
+#                  deploy_url: 'https://fbc-k4t.herokuapp.com/',
+#                  source_url: 'https://github.com/AnonymousApple/Bible_study',
+#                  description: 'Bible App to help Kids'}])
