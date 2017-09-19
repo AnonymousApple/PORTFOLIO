@@ -32,9 +32,6 @@
       <nav>
         <%= link_to 'Home', root_path %>
         <%= link_to 'About', home_about_path %>
-        <div class='pull-right'>
-        <%= link_to 'FaceBook Post', 'https://m.facebook.com/techtalentsouth/photos/a.735350673313655.1073741833.173544676160927/752282428287146/?type=3&source=54', target: '_blank' %>
-      </div>
       </nav>
       <% if !notice.nil? %>
         <p id='notice' class='alert alert-info'><%= notice %></p>
