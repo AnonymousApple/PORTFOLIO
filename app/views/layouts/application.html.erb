@@ -13,9 +13,6 @@
         font-size: 45px;
         text-decoration: none;
       }
-      nav {
-        background-color: black;
-      }
       .img {
         width: 200px;
         height: 100px;
@@ -24,15 +21,20 @@
         transform: rotate(90deg);
         position: relative;
       }
+      a[role='presentation'] {
+        background-color: rgba(255, 0, 0, 0.3);
+      }
     </style>
   </head>
 
   <body>
     <div class='container'>
-      <nav>
-        <%= link_to 'Home', root_path %>
-        <%= link_to 'About', home_about_path %>
-      </nav>
+      <ul class='nav nav-tabs'>
+        <li><%= link_to 'Projects', root_path, role: 'presentation' %></li>
+        <li><%= link_to 'About Me', home_about_path, role: 'presentation' %></li>
+        <li><%= link_to 'Interview', home_interview_path, role: 'presentation' %></li>
+        <li><%= link_to '1st Day in Class', 'https://m.facebook.com/techtalentsouth/photos/a.735350673313655.1073741833.173544676160927/752282428287146/?type=3&source=54', target: '_blank', role: 'presentation' %></li>
+      </ul>
       <% if !notice.nil? %>
         <p id='notice' class='alert alert-info'><%= notice %></p>
       <% end %>
