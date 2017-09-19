@@ -62,7 +62,7 @@ class ProjectsController < ApplicationController
   end
 
   def clear
-    @projects.destroy_all
+    @projects = []
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Successfully cleared all projects.' }
       format.json { head :no_content }
