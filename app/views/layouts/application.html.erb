@@ -17,11 +17,12 @@
         background-color: black;
       }
       .img {
-        width: 1152;
-        height: 2048px;
+        width: 200px;
+        height: 100px;
         -ms-transform: rotate(90deg); /* IE 9 */
         -webkit-transform: rotate(90deg); /* Chrome, Safari, and Opera */
-        transform: rotate3d(90deg);
+        transform: rotate(90deg);
+        position: relative;
       }
     </style>
   </head>
@@ -31,11 +32,19 @@
       <nav>
         <%= link_to 'Home', root_path %>
         <%= link_to 'About', home_about_path %>
+        <div class='pull-right'>
+        <%= link_to 'FaceBook Post', 'https://m.facebook.com/techtalentsouth/photos/a.735350673313655.1073741833.173544676160927/752282428287146/?type=3&source=54', target: '_blank' %>
+      </div>
       </nav>
       <% if !notice.nil? %>
         <p id='notice' class='alert alert-info'><%= notice %></p>
       <% end %>
       <%= yield %>
     </div>
+    <script>
+      $('.toggle').click(function() {
+        $('.img').toggle(1000);
+      });
+    </script>
   </body>
 </html>
