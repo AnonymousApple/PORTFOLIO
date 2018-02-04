@@ -17,3 +17,7 @@ Project.create([{name: 'K4T',
                  deploy_url: 'https://fbc-k4t.herokuapp.com/',
                  source_url: 'https://github.com/AnonymousApple/Bible_study',
                  description: 'Bible App to help Kids'}])
+Project.create([{name: 'MartaBusAPI',
+                 deploy_url: 'https://martabus.herokuapp.com/',
+                 source_url: 'https://github.com/BugZeroCodes/martaBusAPI',
+                 description: ''}])
