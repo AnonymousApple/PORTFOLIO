@@ -21,3 +21,7 @@ Project.create([{name: 'MartaBusAPI',
                  deploy_url: 'https://martabus.herokuapp.com/',
                  source_url: 'https://github.com/BugZeroCodes/martaBusAPI',
                  description: ''}])
+Project.create([{name: 'Spelling',
+                 deploy_url: 'https://spelling-app.herokuapp.com/',
+                 source_url: 'https://github.com/BugZeroCodes/Spelling-App',
+                 description: 'An app to help students memorize their spelling words'}])
